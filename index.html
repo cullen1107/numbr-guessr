@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbr Guessr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="w-full">
+      <div class="flex space-between items-center mb-2">
+        <button id="play-again">Play Again!</button>
+        <p>(Between 1 and 20)</p>
+      </div>
+      <h1 class="mb-2 text-center">Guess My Number!</h1>
+      <div class="flex items-center mb-4">
+        <div class="divider-line"></div>
+        <div id="mystery-box">?</div>
+        <div class="divider-line"></div>
+      </div>
+      <div class="flex space-between items-center">
+        <div class="flex column half">
+          <input id="guess-input" type="number" class="mb-1" />
+          <button>Check!</button>
+        </div>
+        <div class="flex column half"></div>
+      </div>
+    </div>
+    <script src="app/main.js"></script>
+  </body>
+</html>
