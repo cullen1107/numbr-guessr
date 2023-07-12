@@ -135,6 +135,17 @@ input {
   width: 50%;
 }
 
+.error {
+  color: #f24c3d;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
 /* End Helpers */
 .divider-line {
   height: 4px;
