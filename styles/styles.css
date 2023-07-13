@@ -7,6 +7,7 @@
 :root {
   --color-dark: #333;
   --color-light: #eee2de;
+  --color-win: #22bb33;
   --body-font: "Press Start 2P", cursive;
 }
 
@@ -15,7 +16,7 @@ body {
   font-family: var(--body-font);
   color: var(--color-light);
   min-height: 100vh;
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
   width: 100%;
   font-size: 1rem;
@@ -23,6 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: all 300ms ease-in-out;
 }
 
 h1,
@@ -146,7 +148,15 @@ input {
   display: none;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* End Helpers */
+#header.button-hidden {
+  justify-content: center;
+}
+
 .divider-line {
   height: 4px;
   background: var(--color-light);
@@ -161,6 +171,10 @@ input {
   min-width: 200px;
   text-align: center;
   padding: 1rem 0;
+}
+
+.win-bg {
+  background: var(--color-win);
 }
 
 /* Mobile Styles */
