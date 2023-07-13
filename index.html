@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numbr Guessr</title>
+    <title>NumbrGuessr</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,15 +12,17 @@
     />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <body>
+  <body class="ease-in-out">
     <div class="w-full container">
       <div
         id="header"
         class="flex column-mobile items-center mb-3 mb-1-mobile button-hidden"
       >
-        <button id="play-again-btn" class="mx-auto-mobile hide" type="button">
-          Play Again!
-        </button>
+        <div class="relative w-full-mobile">
+          <button id="play-again-btn" class="mx-auto-mobile hide" type="button">
+            Play Again!
+          </button>
+        </div>
         <p class="text-center-mobile mt-2-mobile">(Between 1 and 100)</p>
       </div>
       <h1 class="mb-2 text-center">Guess My Number!</h1>
@@ -30,28 +32,31 @@
         <div class="divider-line"></div>
       </div>
       <div class="flex space-between column-mobile items-center">
-        <div class="flex column half justify-center items-center mb-2-mobile">
+        <form
+          id="guess-form"
+          class="flex column half justify-center items-center mb-2-mobile"
+          autocomplete="off"
+        >
           <input
-            id="guess-input"
-            type="number"
-            min="1"
-            max="100"
-            placeholder="50"
-            class="mb-1"
+            autocomplete="false"
+            name="hidden"
+            type="text"
+            style="display: none"
           />
+          <input id="guess-input" placeholder="50" class="mb-1 text-center" />
           <button id="check-guess-btn" type="submit" class="mx-auto">
             Check!
           </button>
-          <small id="error-msg" class="error text-center hide">
+          <span id="error-msg" class="error text-center opacity-0">
             Please select a number between 1 and 100
-          </small>
-        </div>
+          </span>
+        </form>
         <div class="flex column half justify-center">
           <h3
             id="feedback-message"
-            class="mb-4 mb-2-mobile text-center-mobile uppercase"
+            class="mb-4 mb-2-mobile text-center-mobile uppercase initial-feedback ease-in-out"
           >
-            Start guessing...
+            Start guessing
           </h3>
           <div class="flex items-center justify-center-mobile mb-1">
             <span class="mr-1"
