@@ -54,7 +54,6 @@ window.addEventListener("load", (event) => {
         addInText("Too Low");
       } else if (guess > randomNumber) {
         // too high
-        addInText();
         score--;
         scoreLabel.innerText = score;
         addInText("Too High");
