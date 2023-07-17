@@ -83,7 +83,9 @@ window.addEventListener("load", (event) => {
     // handle check button click
     document.getElementById("guess-form").addEventListener("submit", (e) => {
       e.preventDefault();
+      e.stopImmediatePropagation();
       const guess = Number(e.target.elements["guess-input"].value);
+
       if (guess >= 1 && guess <= 100) {
         guessInput.placeholder = "";
         errorMsg.classList.add("opacity-0");
